@@ -1,0 +1,31 @@
+<?php print_r( $this->record);?>
+
+
+<form class="form-inline" name="recordData" action="<?php echo APP . 'index/record';?>" method="post">
+<div class="controls">
+<p class="control-label">Title/Intro</p>
+<input class="input-xlarge" type="text" name="recordIntro" placeholder="[ Put record intro here ]" />
+</div>
+
+<div class="controls">
+<p class="control-label">RecordContent</p>
+<textarea class="input-xlarge" id="displayTextarea" name="recordContent" rows="5" placeholder="[ Put record content here ]"></textarea>
+</div>
+
+
+<div class="controls">
+<p class="control-label">RecordType</p>
+<select name="recordType">
+<option value="1">public</option>
+<option value="2">private</option>
+</select>
+</div>
+<p></p>
+
+<input name="recordDate" type="hidden" value="<?php echo date('Y-m-d h:i:s');?>" />
+<p><input class="btn-success" type="submit" value="send" /></p>
+</form>
+
+
+
+<div><?php echo date('Y-m-d h:i:s');?></div>

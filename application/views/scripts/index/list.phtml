@@ -1,0 +1,9 @@
+<div class="alert alert-info">Record List</div>
+
+<?php foreach( $this->columnList as $re){?>
+<div class="alert alert-success">
+<div><h3>Volumn <?php echo $re['recordId']?> - <?php echo $re['recordIntro']?></h3></div>
+<div class="offset1"><?php echo $re['recordContent']?></div>
+<div><h5><?php echo $re['recordDate']?></h5></div>
+</div>
+<?php }?>
